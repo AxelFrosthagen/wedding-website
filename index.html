@@ -10,14 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Ram & Antara getting hitched!</title>
-    <meta name="description" content="We would like to invite you to our big day.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Ram & Antara getting hitched">
-    <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
-    <meta property="og:type" content="website">
+    <title>Axel <3 Elina</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -59,6 +52,59 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://kit.fontawesome.com/d48a501d2e.js" crossorigin="anonymous"></script>
+    <style>
+     .map-marker {
+         background-color: #4285F4;
+         border-radius: 8px;
+         color: #FFFFFF;
+         font-size: 14px;
+         padding: 10px 15px;
+         position: relative;
+     }
+
+     .map-marker::after {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 100%;
+         transform: translate(-50%, 0);
+         width: 0;
+         height: 0;
+         border-left: 8px solid transparent;
+         border-right: 8px solid transparent;
+         border-top: 8px solid #4285F4;
+     }
+
+     @keyframes drop {
+         0% {
+             transform: translateY(-200px) scaleY(0.9);
+             opacity: 0;
+         }
+         5% {
+             opacity: 0.7;
+         }
+         50% {
+             transform: translateY(0px) scaleY(1);
+             opacity: 1;
+         }
+         65% {
+             transform: translateY(-17px) scaleY(0.9);
+             opacity: 1;
+         }
+         75% {
+             transform: translateY(-22px) scaleY(0.9);
+             opacity: 1;
+         }
+         100% {
+             transform: translateY(0px) scaleY(1);
+             opacity: 1;
+         }
+     }
+     .drop {
+         animation: drop 0.3s linear forwards var(--delay-time);
+     }
+    </style>
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -116,6 +162,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
+                <h3>TODO: Enable mail response</h3>
                 <h3>We are getting hitched</h3>
                 <p>The dates are 27<sup>th</sup> & 28<sup>th</sup> of November '17 and we would like you to be a part of
                     it.</p>
@@ -363,49 +410,127 @@
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/9giqL1H6yRs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
+         data-property="{videoURL:'https://youtu.be/-SCsqVEsQxY?si=evFecMBwnyLYyNME',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:10, stopAt:180, opacity:1}">
     </div>
     <div id="video-content">
-        <h5>Kolkata</h5>
-        <p>City of joy</p>
+        <h5>Östergötland</h5>
+        <p>Där Vättern möter Östersjön</p>
     </div>
 </section>
 
-<section id="map" class="section-padding">
+
+<section class="section-padding ">
     <div class="text-center">
-        <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
+        <h3>Var sker dessa festligheter?</h3>
+        <p>Vi kommer att hålla oss i Östergötland mellan Linköping och Söderköping</p>
     </div>
-    <div id="map-canvas"></div>
+    <div id="map" style="height: 500px"></div>
+    <script>
+     (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+         key: "AIzaSyDzahEe8e1JENu3YmKp1DyEcfFPunONUFs",
+         v: "weekly",
+         // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+         // Add other bootstrap parameters as needed, using camel case.
+     });
+
+     const intersectionObserver = new IntersectionObserver((entries) => {
+         for (const entry of entries) {
+             if (entry.isIntersecting) {
+                 entry.target.classList.add('drop');
+                 intersectionObserver.unobserve(entry.target);
+             }
+         }
+     });
+
+     let map;
+
+     function animate(content) {
+         content.style.opacity = '0';
+         content.addEventListener('animationend', (event) => {
+             content.classList.remove('drop');
+             content.style.opacity = '1';
+         });
+         const time = 2 + Math.random(); // 2s delay for easy to see the animation
+         content.style.setProperty('--delay-time', time + 's');
+         intersectionObserver.observe(content);
+     }
+
+     async function initMap() {
+         const { Map } = await google.maps.importLibrary("maps");
+         const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+         map = new Map(document.getElementById("map"), {
+             center: { lat: 58.47933093261719, lng: 16.122487937927246 },
+             zoom: 12,
+             mapId: 'ahsiuuhw8jeodu',
+             mapTypeId: 'hybrid',
+         });
+
+         const ceremonyTag = document.createElement("div");
+         ceremonyTag.className = "map-marker";
+         ceremonyTag.innerHTML = '<span class="fa fa-church"></span> Vigseln';
+
+         const marker1 = new AdvancedMarkerElement({
+             map,
+             position: { lat: 58.467333, lng: 15.98551312 },
+             content: ceremonyTag,
+         });
+         animate(ceremonyTag);
+
+         const partyTag = document.createElement("div");
+         partyTag.className = "map-marker";
+         partyTag.innerHTML = '<span class="fa fa-champagne-glasses"></span> Festen';
+
+         const marker2 = new AdvancedMarkerElement({
+             map,
+             position: { lat: 58.499953, lng: 16.25851312 },
+             content: partyTag,
+         });
+         animate(partyTag);
+     }
+
+     initMap();
+    </script>
+    <!-- <gmp-advanced-marker position="58.46733093261719,15.985487937927246" title="Vigseln"></gmp-advanced-marker> -->
+    <!-- <gmp-advanced-marker position="58.4995231628418,16.259323120117188" title="Festen"></gmp-advanced-marker> -->
+
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
                 <div class="text-center">
                     <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Visa information
                     </div>
                 </div>
                 <div id="map-content" class="pointer-events-auto">
-                    <div class="row">
+                    <div class="row" style="text-align:center;">
                         <div class="col-md-6">
-                            <h5>ITC Fortune Park</h5>
-                            <p>Kona Expressway, Howrah, West Bengal 711403, India</p>
+                            <h5><i class="fa fa-church"></i> Vigseln</h5>
+                            <p>Skärkind Kyrka
+                                <br/>mellan Linköping och Norrköping
+                                <br/><b><i class="far fa-clock"></i> 13:00</b>
+                            </p>
                         </div>
                         <div class="col-md-6">
-                            <h5>Mr. Amit Roy</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
-                                <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p>
+                            <h5><i class="fa fa-champagne-glasses"></i> Festen</h5>
+                            <p>Vänneberga Gård
+                                <br/>utanför Söderköping
+                                <br/><b><i class="far fa-clock"></i> 15:30</b>
+                            </p>
+                            <!-- <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
+                                 <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p> -->
                         </div>
                     </div>
                     <div class="row text-center">
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
-                        </div>
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
+                        <!-- <div class="col-md-6" style="padding: 5px;">
+                             <a class="btn btn-fill btn-small"
+                             href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
+                             class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                             </div> -->
+                        <div class="" style="padding: 5px;">
+                            <a class="btn btn-accent btn-small" id="btn-show-map">
+                                <i class="fa fa-map-marker"></i>&nbsp;&nbsp; Visa karta
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -423,8 +548,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <h3>Tack!</h3>
+                        <p>Vi är glada att du vill vara med och fira våran stora dag</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -435,8 +560,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <h3>Vad väntar du på?</h3>
+                <p>Sista dagen att OSA är 1 september, men varför inte anmäla sig nu!</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -444,14 +569,14 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
+                                                                     placeholder="Mailadress"
                                                                      required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
+                                                                 placeholder="Ditt namn"
                                                                  required>
                             </div>
                         </div>
@@ -467,10 +592,19 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
+                                <i class="fa fa-key"></i><input name="invite_code" id="invite_code"
+                                                                class=""
+                                                                placeholder="Inbjudnings kod"
                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input name="allergies"
+                                                                  class=""
+                                                                  placeholder="Eventuella allergier">
                             </div>
                         </div>
                     </div>
@@ -478,8 +612,7 @@
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                       Skicka anmälan!
                     </button>
                 </form>
             </div>
@@ -492,7 +625,7 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Ram with lots of <span class="fa fa-heart pulse2"></span> for Antara</p>
+                <p>Axel Frosthagen <span class="fa fa-heart pulse2"></span> Elina Bågesund</p>
             </div>
         </div>
     </div>
@@ -505,23 +638,6 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
-<!-- Google Analytics -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46465113-4', 'auto');
-    ga('send', 'pageview');
-</script>
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzahEe8e1JENu3YmKp1DyEcfFPunONUFs&callback=console.debug&libraries=maps,marker&v=beta"></script> -->
 </body>
 </html>
