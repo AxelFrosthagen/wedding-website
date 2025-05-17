@@ -1,11 +1,55 @@
 <!doctype html>
 <html lang="sv">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axel <3 Elina</title>
+            <link rel="stylesheet" href="style.css" />
+            <link rel="stylesheet" href="alt.css" />
 
 </head>
+
 <body>
-    <div>Hello World!</div>
+    <div class="hero">
+        <img src="images/logo.png" width="33%" />
+    </div>
+    <nav>
+        <a href="#intro">How we met</a>
+        <a href="#events">Events</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#eng-pics">Engagement</a>
+        <a href="#video-bg">Glimpse of the city</a>
+        <a href="#map" class="login">Venue</a>
+        <a href="#rsvp" class="btn-white btn-small">RSVP</a>
+    </nav>
+    <section>
+        <container>
+            <div>Hello World!</div>
+        </container>
+    </section>
+
+    <section class="rsvp text-center" id="rsvp">
+        <container>
+            <h3>Vad väntar du på?</h3>
+            <p>Sista dagen att OSA är 1 september, men varför inte anmäla sig nu!</p>
+            <form id="rsvp-form" class="rsvp-form" action="" method="POST">
+                <i class="fa fa-envelope"></i><input type="email" name="email" class="" placeholder="Mailadress"
+                    required>
+                <i class="fa fa-user"></i><input name="name" class="" placeholder="Ditt namn" required>
+                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0" max="4"
+                    placeholder="Husband/Wife or kids" required>
+                <i class="fa fa-key"></i><input name="invite_code" id="invite_code" class=""
+                    placeholder="Inbjudnings kod" required>
+                <i class="fa fa-users"></i><input name="allergies" class="" placeholder="Eventuella allergier">
+                <div class="col-md-12" id="alert-wrapper"></div>
+                <button>
+                    Skicka anmälan!
+                </button>
+            </form>
+        </container>
+    </section>
+
 </body>
+
 </html>
