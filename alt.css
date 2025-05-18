@@ -2,4 +2,9 @@
     container {
         width: 95vw;
     }
+
+    nav {
+        display: none;
+        /* TODO: Fix accordian menu */
+    }
 }
