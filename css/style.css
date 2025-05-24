@@ -47,7 +47,7 @@ nav a:hover {
 .hero {
     position: fixed;
     z-index: -1;
-    background-image: url("images/couple.jpg");
+    background-image: url("../images/couple.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
