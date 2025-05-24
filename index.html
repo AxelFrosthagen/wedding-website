@@ -4,15 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axel <3 Elina</title>
-            <link rel="stylesheet" href="style.css" />
-            <link rel="stylesheet" href="alt.css" />
-
+    <title>Axel & Elina</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/alt.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="hero">
-        <img src="images/logo.png" width="33%" />
+    <div class="hero-section">
+        <div class="hero">
+            <img src="images/logo.png" width="33%" />
+        </div>
     </div>
     <nav>
         <a href="#intro">Plats</a>
@@ -26,6 +28,21 @@
         <container>
             <div>Hello World!</div>
         </container>
+    </section>
+
+    <section class="video-section">
+        <div class="video-background">
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/-SCsqVEsQxY?autoplay=1&mute=1&controls=0&loop=1&playlist=-SCsqVEsQxY&showinfo=0&rel=0&start=8&end=170"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-content">
+            <h2>Östergötland</h2>
+            <p>Där Vättern möter Östersjön</p>
+        </div>
     </section>
 
     <section class="rsvp text-center" id="rsvp">
@@ -50,6 +67,7 @@
         </container>
     </section>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

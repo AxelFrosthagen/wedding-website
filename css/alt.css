@@ -7,4 +7,9 @@
         display: none;
         /* TODO: Fix accordian menu */
     }
+
+    .video-background {
+        height: 40vw;
+    }
+
 }

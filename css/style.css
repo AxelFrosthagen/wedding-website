@@ -1,22 +1,24 @@
 body {
-    background-color: tomato;
+    background-color: white;
     margin: 0;
 }
 
 section {
     background-color: grey;
-    margin: 1em 0;
+    margin: 0;
 }
 
 container {
     display: block;
     width: 70vw;
-    margin: 10px auto;
+    margin: 0px auto;
     height: 100vh;
+    padding: 15px;
 }
 
 nav {
     width: 100%;
+    height: 7vh;
     background-color: white;
     position: sticky;
     top: 0;
@@ -37,15 +39,51 @@ nav a:hover {
     background-color: wheat;
 }
 
+.hero-section {
+    width: 100%;
+    height: 93vh;
+}
+
 .hero {
+    position: fixed;
+    z-index: -1;
     background-image: url("images/couple.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    height: 93vh;
 }
 
 .hero img {
     display: block;
     margin: 0 auto;
+}
+
+.video-section {
+    position: relative;
+    color: white;
+}
+
+.video-background {
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background iframe {
+    margin-top: -15%;
+    width: 100vw;
+    height: 68vw;
+    pointer-events: none;
+}
+
+.video-content {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* TODO: Fix relativity */
+    padding: 3rem 0;
+    text-align: center;
 }
