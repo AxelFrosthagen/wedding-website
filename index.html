@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/alt.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d48a501d2e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="hero-section">
         <div class="hero">
-            <img src="images/logo.png" width="33%" />
+            <img src="images/AE-datum1.svg" width="33%" />
         </div>
     </div>
     <nav>
@@ -51,21 +52,29 @@
             <h3>Vad väntar du på?</h3>
             <p>Sista dagen att OSA är 1 september, men varför inte anmäla sig nu!</p>
             <form id="rsvp-form" class="rsvp-form" action="" method="POST">
-                <i class="fa fa-envelope"></i><input type="email" name="email" class="" placeholder="Mailadress"
-                    required>
-                <i class="fa fa-user"></i><input name="name" class="" placeholder="Ditt namn" required>
-                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0" max="4"
-                    placeholder="Husband/Wife or kids" required>
-                <i class="fa fa-key"></i><input name="invite_code" id="invite_code" class=""
-                    placeholder="Inbjudnings kod" required>
-                <i class="fa fa-users"></i><input name="allergies" class="" placeholder="Eventuella allergier">
+                <div class="user-box">
+                    <input name="name" required>
+                    <label><i class="fa fa-user"></i><b> För- och Efternamn</b></label>
+                </div>
+                <div class="user-box">
+                    <input name="allergies" required>
+                    <label><i class="fa fa-wheat-awn-circle-exclamation"></i><b> Allergier</b></label>
+                </div>
+                <div class="user-box">
+                    <input name="invite_code" id="invite_code" required>
+                    <label><i class="fa fa-key"></i><b> Inbjudningskod</b></label>
+                </div>
                 <div class="col-md-12" id="alert-wrapper"></div>
                 <button>
                     Skicka anmälan!
                 </button>
             </form>
+            </form>
+
+
         </container>
     </section>
+
 
     <script src="js/script.js"></script>
 </body>
