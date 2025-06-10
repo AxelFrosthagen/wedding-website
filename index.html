@@ -49,12 +49,18 @@
     <section class="rsvp text-center" id="rsvp">
         <container>
             <!-- TODO: Add modal with confirmation -->
+            <hr />
             <h3>Vad väntar du på?</h3>
             <p>Sista dagen att OSA är 1 september, men varför inte anmäla sig nu!</p>
+            <hr class="bookends">
             <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                 <div class="user-box">
                     <input name="name" required>
                     <label><i class="fa fa-user"></i><b> För- och Efternamn</b></label>
+                </div>
+                <div class="user-box">
+                    <input name="coming" required>
+                    <label><i class="fa fa-envelope"></i><b> Kan du komma?</b></label>
                 </div>
                 <div class="user-box">
                     <input name="allergies" required>
@@ -66,7 +72,7 @@
                 </div>
                 <div class="col-md-12" id="alert-wrapper"></div>
                 <button>
-                    Skicka anmälan!
+                    <span>Skicka anmälan!</span>
                 </button>
             </form>
         </container>
