@@ -195,3 +195,47 @@ button:active {
     left: 0;
     font-size: 12px;
 }
+
+.radio-group {
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+.radio-checkbox input {
+    visibility: hidden;
+    display: none;
+}
+
+.radio-checkbox *,
+.radio-checkbox ::after,
+.radio-checkbox ::before {
+    box-sizing: border-box;
+}
+
+.radio-checkbox {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 7px 0 7px 15%;
+}
+
+.radio-checkbox .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-checkbox .label svg {
+    vertical-align: middle;
+}
+
+.radio-checkbox .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s all;
+}
+
+.radio-checkbox .check:checked+label svg g path {
+    stroke-dashoffset: 0;
+}

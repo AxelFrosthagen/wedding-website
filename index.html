@@ -58,9 +58,38 @@
                     <input name="name" required>
                     <label><i class="fa fa-user"></i><b> För- och Efternamn</b></label>
                 </div>
-                <div class="user-box">
-                    <input name="coming" required>
+                <div class="radio-group">
                     <label><i class="fa fa-envelope"></i><b> Kan du komma?</b></label>
+                    <div class="radio-checkbox">
+                        <input name="coming" value="is coming" type="radio" class="check" id="check1" checked />
+                        <label for="check1" class="label">
+                            <svg viewBox="0 0 65 65" height="30" width="30">
+                                <rect x="7" y="7" width="50" height="50" stroke="#e1b608" stroke-width="3"
+                                    fill="none" />
+                                <g transform="translate(-23,-967.36216)" id="layer1-60">
+                                    <path id="path4146"
+                                        d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23"
+                                        fill="none" stroke="#e1b608" stroke-width="5" class="path1" />
+                                </g>
+                            </svg>
+                            <span>Självklart!</span>
+                        </label>
+                    </div>
+                    <div class="radio-checkbox">
+                        <input name="coming" value="not coming" type="radio" class="check" id="check2" />
+                        <label for="check2" class="label">
+                            <svg viewBox="0 0 65 65" height="30" width="30">
+                                <rect x="7" y="7" width="50" height="50" stroke="#e1b608" stroke-width="3"
+                                    fill="none" />
+                                <g transform="translate(-23,-967.36216)" id="layer1-60">
+                                    <path id="path4146"
+                                        d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23"
+                                        fill="none" stroke="#e1b608" stroke-width="5" class="path1" />
+                                </g>
+                            </svg>
+                            <span>Har tyvärr annat planerat</span>
+                        </label>
+                    </div>
                 </div>
                 <div class="user-box">
                     <input name="allergies" required>
