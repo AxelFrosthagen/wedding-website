@@ -29,11 +29,15 @@ section {
     margin: 0;
 }
 
+.alt-section {
+    background-color: #1b3a47;
+}
+
 container {
     display: block;
     width: 70vw;
     margin: 0px auto;
-    padding: 50px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -52,7 +56,8 @@ nav a {
     /* TODO: Fill width correctly */
     text-align: center;
     text-decoration: none;
-    color: #bfb59f;
+    /* color: #bfb59f; */
+    color: #e1b608;
     font-size: 1.2rem;
     margin: 15px 0;
 }
