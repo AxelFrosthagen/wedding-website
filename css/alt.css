@@ -13,3 +13,9 @@
     }
 
 }
+
+@media (max-width:871px) {
+    column {
+        width: 100%;
+    }
+}
