@@ -14,12 +14,25 @@ body {
     font-style: normal;
 }
 
+h2,
 h3 {
     margin: 15px 0;
     font-family: "Gwendolyn", cursive;
     font-weight: 700;
     font-style: normal;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
     font-size: 2.5rem;
+}
+
+h4 {
+    margin: 10px 0;
+    font-size: 1.7rem;
 }
 
 hr {
@@ -57,7 +70,6 @@ container {
     width: 70vw;
     margin: 0px auto;
     padding: 30px 0;
-    text-align: center;
 }
 
 row:after {
@@ -68,7 +80,9 @@ row:after {
 
 column {
     float: left;
-    width: 50%;
+    width: 48%;
+    padding: 1%;
+    height: 100%;
 }
 
 nav {
@@ -99,6 +113,13 @@ nav a:hover {
     margin-top: 0;
     font-size: 1.3rem;
     transition: 0.3s;
+}
+
+.image-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }
 
 .hero-section {
@@ -142,15 +163,9 @@ nav a:hover {
 
 .video-content {
     width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
     /* TODO: Fix relativity */
     padding: 3rem 0;
     text-align: center;
-}
-
-.video-content {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -161,6 +176,7 @@ nav a:hover {
 .rsvp container {
     width: 70vw;
     max-width: 500px;
+    text-align: center;
 }
 
 form {
@@ -279,4 +295,8 @@ button:active {
 
 .radio-checkbox .check:checked+label svg g path {
     stroke-dashoffset: 0;
+}
+
+.footer {
+    text-align: center;
 }
