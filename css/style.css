@@ -1,3 +1,8 @@
+html {
+    /* NOTE: This may not work in all browsers */
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #1b3a47;
     margin: 0;
@@ -42,13 +47,13 @@ hr {
     margin: 40px auto 0px auto;
     overflow: visible;
     border: none;
-    border-top: medium double #e1b608;
+    border-top: 4px double #e1b608;
     color: #e1b608;
     text-align: center;
 }
 
 hr:after {
-    content: '\f004\f004\f004';
+    content: '\f004';
     display: inline-block;
     position: relative;
     top: -0.5em;
@@ -82,7 +87,6 @@ column {
     float: left;
     width: 48%;
     padding: 1%;
-    height: 100%;
 }
 
 nav {
@@ -115,6 +119,24 @@ nav a:hover {
     transition: 0.3s;
 }
 
+.scroll-down {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    bottom: 25px;
+    color: #e1b608;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+.scroll-down:hover {
+    font-size: 3.2rem;
+    bottom: 22px;
+    transition: 0.3s;
+}
+
 .image-cc {
     display: flex;
     justify-content: center;
@@ -123,6 +145,7 @@ nav a:hover {
 }
 
 .hero-section {
+    position: relative;
     width: 100%;
     height: 93vh;
 }
@@ -138,8 +161,13 @@ nav a:hover {
 }
 
 .hero img {
+    position: absolute;
     display: block;
-    margin: 0 auto;
+    min-width: 350px;
+    max-width: 450px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 .video-section {
