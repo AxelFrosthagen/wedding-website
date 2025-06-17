@@ -3,6 +3,16 @@
         width: 95vw;
     }
 
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
     nav {
         display: none;
         /* TODO: Fix accordian menu */
