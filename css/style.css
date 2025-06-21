@@ -175,6 +175,15 @@ nav a:hover {
     transform: translate(-50%, -50%)
 }
 
+.overlay {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--red);
+    opacity: 0.4;
+}
+
 .video-section {
     position: relative;
     color: white;
