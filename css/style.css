@@ -77,6 +77,20 @@ section {
     background-color: var(--blue);
 }
 
+.card-section {
+    background-color: transparent;
+    padding: 7vw;
+}
+
+.card-section container {
+    width: 90%;
+    padding: 5%;
+    background-color: var(--blue);
+    color: var(--lightblue);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
 container {
     display: block;
     width: 70vw;
