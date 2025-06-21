@@ -1,10 +1,17 @@
+:root {
+    --gold: #e1b608;
+    --blue: #1b3a47;
+    --lightblue: #8498d7;
+    --red: #4d1220;
+}
+
 html {
     /* NOTE: This may not work in all browsers */
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #1b3a47;
+    background-color: var(--blue);
     margin: 0;
     font-family: "Baskervville", serif;
     font-optical-sizing: auto;
@@ -47,8 +54,8 @@ hr {
     margin: 40px auto 0px auto;
     overflow: visible;
     border: none;
-    border-top: 4px double #e1b608;
-    color: #e1b608;
+    border-top: 4px double var(--gold);
+    color: var(--gold);
     text-align: center;
 }
 
@@ -61,13 +68,13 @@ hr:after {
 }
 
 section {
-    background-color: #4d1220;
-    color: #e1b608;
+    background-color: var(--red);
+    color: var(--gold);
     margin: 0;
 }
 
 .alt-section {
-    background-color: #1b3a47;
+    background-color: var(--blue);
 }
 
 container {
@@ -93,7 +100,7 @@ nav {
     width: 100%;
     height: 7vh;
     min-height: 60px;
-    background-color: #1b3a47;
+    background-color: var(--blue);
     position: sticky;
     top: 0;
     z-index: 99;
@@ -105,8 +112,7 @@ nav a {
     /* TODO: Fill width correctly */
     text-align: center;
     text-decoration: none;
-    /* color: #bfb59f; */
-    color: #e1b608;
+    color: var(--lightblue);
     font-size: 1.2rem;
     line-height: 7vh;
     vertical-align: middle;
@@ -114,8 +120,7 @@ nav a {
 }
 
 nav a:hover {
-    margin-top: 0;
-    font-size: 1.3rem;
+    color: var(--gold);
     transition: 0.3s;
 }
 
@@ -126,7 +131,7 @@ nav a:hover {
     font-size: 3rem;
     text-align: center;
     bottom: 25px;
-    color: #e1b608;
+    color: var(--gold);
     text-shadow: 0px 4px rgba(0, 0, 0, 0.6);
     transition: 0.3s;
 }
@@ -215,8 +220,9 @@ button {
     display: inline-block;
     padding: 0.9rem 1.8rem;
     font-weight: 700;
-    color: white;
-    border: 3px solid #e1b608;
+    font-size: 0.9rem;
+    border: 3px solid var(--gold);
+    color: var(--gold);
     cursor: pointer;
     position: relative;
     background-color: transparent;
@@ -233,7 +239,7 @@ button::before {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #e1b608;
+    background-color: var(--gold);
     transform: translateX(-100%);
     transition: all .3s;
     z-index: -1;
@@ -259,7 +265,7 @@ button:active {
     color: #bfb59f;
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #d7a016;
+    border-bottom: 1px solid var(--gold);
     outline: none;
     background: transparent;
 }
