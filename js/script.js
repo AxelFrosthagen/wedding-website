@@ -5,7 +5,7 @@ $(document).ready(function() {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Häng kvar!</strong> Vi sparar din anmälan.'));
 
         $.post('https://script.google.com/macros/s/AKfycbygFXdiDQ60lX0v2pKUJAfBeb5qlV79zbjZrODzVckwGzd8FNuRm10H3H_N7uUpRZM/exec', data)
             .done(function(data) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
             })
             .fail(function(data) {
                 console.log(data);
-                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Ajdå!</strong> Det ser ut som att det blivit fel i servern...'));
             });
     });
 
