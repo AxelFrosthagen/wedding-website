@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axel & Elina</title>
-    <link rel="icon" type="image/x-icon" href="images/AE-datum1.svg">
+    <link rel="icon" type="image/x-icon" href="images/AE-bara.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +22,7 @@
         <div class="hero">
             <div class="overlay"></div>
         </div>
-        <img src="images/AE-datum1.svg" width="33%" />
+        <img src="images/AE-datum-ram.svg" width="100%" />
         <a href="#intro" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
     </div>
     <nav class="gloock">
@@ -76,7 +76,7 @@
                 <column33 style="text-align: right; margin-top: 4vw;">
                     <h3>Vigsel</h3>
                     <p>Kl. 14:00<br />
-                        Skärkinds kyrka<br />
+                        Skärkinds Kyrka<br />
                         617 92 Norsholm</p>
                 </column33>
                 <column33>
@@ -120,6 +120,10 @@
     <section class="card-section" id="dresscode">
         <container class="card">
             <row>
+                <column40>
+                    <img src="images/kladkod.svg" width="80%"
+                        style="display: block; margin: 0 auto; max-height: 250px; object-fit: contain;" />
+                </column40>
                 <column60>
                     <h4 class="gloock">Klädkod</h4>
                     <p>
@@ -130,27 +134,36 @@
                         med dig en jacka och ett paraply!
                     </p>
                 </column60>
-                <column40>
-                    <img src="images/kladkod.svg" width="80%"
-                        style="display: block; margin: 0 auto; max-height: 250px; object-fit: contain;" />
-                </column40>
             </row>
         </container>
     </section>
     <section id="wish-list">
+        <h4 class="fancy"><span></span></h4>
         <container>
             <row>
-                <column>
-                    <h3>Önskelista</h3>
-                </column>
-                <column>
-                    bilder här!
-                </column>
+                <column60>
+                    <h2>Önskelista</h2>
+                    <p>
+                        Ja här finns det inte många saker, bara en faktiskt. Det är hög tid att Axel får ta sig ut i
+                        världen, så vi vill göra en resa till inget mindre än....... VIETNAM!
+                    </p>
+                    <p>
+                        <i>Det betyder att vi helst av allt önskar oss bidrag till vår bröllopsresa</i> som äger rum nu
+                        i jul.
+                        Ja, vi har till och med bokat flygbiljetter... ombokningsbara, ifall att bröllopet blir för
+                        dyrt, men ÄNDÅ!
+                    </p>
+                </column60>
+                <column40>
+                    <img src="images/selfie.jpg"
+                        style="display: block; margin: 0 auto; max-height: 250px; object-fit: contain;" />
+                </column40>
             </row>
         </container>
+        <h4 class="fancy"><span></span></h4>
     </section>
-    <section class="alt-section" id="speach">
-        <container>
+    <section class="card-section" id="speach">
+        <container class="card">
             <h3>Tal och Spex</h3>
         </container>
     </section>
@@ -160,7 +173,8 @@
             <hr />
             <h3>Vad väntar du på?</h3>
             <p>Sista dagen att OSA är 1 september, men varför inte anmäla sig nu!</p>
-            <hr class="bookends">
+            <!-- TODO: same style as in "plats"? -->
+            <hr />
             <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                 <div class="user-box">
                     <input name="name" required>

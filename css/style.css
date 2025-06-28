@@ -254,8 +254,8 @@ nav a:hover {
     position: absolute;
     display: block;
     min-width: 350px;
-    max-width: 450px;
-    top: 30%;
+    max-width: 650px;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%)
 }
