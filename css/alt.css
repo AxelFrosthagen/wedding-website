@@ -18,6 +18,10 @@
         /* TODO: Fix accordian menu */
     }
 
+    .video-section {
+        height: 47vw;
+    }
+
     .video-background {
         height: 40vw;
     }
@@ -25,7 +29,10 @@
 }
 
 @media (max-width:871px) {
-    column {
+
+    column,
+    column40,
+    column60 {
         width: 100%;
     }
 }

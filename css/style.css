@@ -1,7 +1,7 @@
 :root {
     --gold: #e1b608;
     --blue: #1b3a47;
-    --lightblue: #8498d7;
+    --lightblue: #829ca7;
     --red: #4d1220;
 }
 
@@ -47,6 +47,41 @@ h4 {
     font-size: 1.7rem;
 }
 
+.fancy {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    line-height: 0.6;
+    text-align: center;
+    overflow: hidden;
+}
+
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    bottom: 3px;
+    width: 100vw;
+}
+
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
 hr {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -88,7 +123,6 @@ section {
     background-color: var(--blue);
     color: var(--lightblue);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
-    text-align: center;
 }
 
 .double-border {
@@ -126,6 +160,24 @@ row:after {
 column {
     float: left;
     width: 48%;
+    padding: 1%;
+}
+
+column33 {
+    float: left;
+    width: 31%;
+    padding: 1%;
+}
+
+column40 {
+    float: left;
+    width: 38%;
+    padding: 1%;
+}
+
+column60 {
+    float: left;
+    width: 58%;
     padding: 1%;
 }
 
@@ -220,13 +272,19 @@ nav a:hover {
 .video-section {
     position: relative;
     color: white;
+    height: 34vh;
+    background-color: var(--blue);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
 .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 30vh;
     overflow: hidden;
-    z-index: -1;
 }
 
 .video-background iframe {
