@@ -108,6 +108,7 @@ section {
 
 .alt-section {
     background-color: var(--blue);
+    color: var(--lightblue);
 }
 
 .card-section {
@@ -294,7 +295,7 @@ nav a:hover {
 
 .video-content {
     width: 100vw;
-    /* TODO: Fix relativity */
+    /* FIX: Fix relativity */
     padding: 3rem 0;
     text-align: center;
     margin: 0;
