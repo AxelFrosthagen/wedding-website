@@ -80,26 +80,6 @@ h4 {
     left: 100%;
 }
 
-hr {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    width: 60%;
-    margin: 40px auto 0px auto;
-    overflow: visible;
-    border: none;
-    border-top: 4px double var(--gold);
-    color: var(--gold);
-    text-align: center;
-}
-
-hr:after {
-    content: '\f004';
-    display: inline-block;
-    position: relative;
-    top: -0.5em;
-    font-size: 1.5em;
-}
-
 section {
     background-color: var(--red);
     color: var(--gold);
@@ -242,7 +222,7 @@ nav a:hover {
 .hero {
     position: fixed;
     z-index: -1;
-    background-image: url("../images/DSC00845.JPG");
+    background-image: url("../images/background.JPG");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -309,6 +289,10 @@ nav a:hover {
     width: 70vw;
     max-width: 500px;
     text-align: center;
+}
+
+.rsvp p {
+    text-align: left;
 }
 
 form {
