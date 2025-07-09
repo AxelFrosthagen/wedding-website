@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Häng kvar!</strong> Vi sparar din anmälan.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbygFXdiDQ60lX0v2pKUJAfBeb5qlV79zbjZrODzVckwGzd8FNuRm10H3H_N7uUpRZM/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbw_L1smu3LsQ7FUhxExSPwnib741-71WO3l8V1vsNMdCU0K1ornCYiO-rE5WIFdbdqd/exec', data)
             .done(function(data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     // alert_markup
     function alert_markup(alert_type, msg) {
-        return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>';
+        return '<div class="alert alert-' + alert_type + '" role="alert" style="margin-bottom: 25px;">' + msg + '</div>';
     }
 
 });
