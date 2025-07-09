@@ -14,7 +14,7 @@ $(document).ready(function() {
                     $('#alert-wrapper').html(alert_markup('danger', data.message));
                 } else {
                     $('#alert-wrapper').html('');
-                    $('#rsvp-modal').modal('show');
+                    $('#rsvp-modal').css('display', 'block');
                 }
             })
             .fail(function(data) {
