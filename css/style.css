@@ -303,7 +303,7 @@ button {
     font-weight: 700;
     font-size: 0.9rem;
     border: 3px solid var(--gold);
-    color: var(--gold);
+    color: white;
     cursor: pointer;
     position: relative;
     background-color: transparent;
@@ -362,7 +362,7 @@ button:active {
 }
 
 .user-box input:focus~label,
-.user-box input:valid~label {
+.user-box input:not(:placeholder-shown)~label {
     top: -20px;
     left: 0;
     font-size: 12px;
