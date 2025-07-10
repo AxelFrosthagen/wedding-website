@@ -292,7 +292,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -301,8 +300,8 @@ nav a:hover {
     color: var(--gold);
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid var(--gold);
-    width: 80%;
+    /* border: 1px solid var(--gold); */
+    width: fit-content;
 }
 
 .close {

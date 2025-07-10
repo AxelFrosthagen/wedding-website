@@ -9,11 +9,17 @@ $(document).ready(function() {
 
         $.post('https://script.google.com/macros/s/AKfycbw_L1smu3LsQ7FUhxExSPwnib741-71WO3l8V1vsNMdCU0K1ornCYiO-rE5WIFdbdqd/exec', data)
             .done(function(data) {
-                console.log(data);
                 if (data.result === "error") {
                     $('#alert-wrapper').html(alert_markup('danger', data.message));
                 } else {
                     $('#alert-wrapper').html('');
+
+                    if ($('#check1').is(':checked')) {
+                        $('#modal-coming').css('display', 'block');
+                    } else {
+                        $('#modal-not-coming').css('display', 'block');
+                    }
+
                     $('#rsvp-modal').css('display', 'block');
                 }
             })
@@ -27,5 +33,11 @@ $(document).ready(function() {
     function alert_markup(alert_type, msg) {
         return '<div class="alert alert-' + alert_type + '" role="alert" style="margin-bottom: 25px;">' + msg + '</div>';
     }
+
+    $('#modal-close').on('click', function() {
+        $('#rsvp-modal').css('display', 'none');
+        $('#modal-coming').css('display', 'none');
+        $('#modal-not-coming').css('display', 'none');
+    });
 
 });
